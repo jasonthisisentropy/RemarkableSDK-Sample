@@ -2,7 +2,7 @@
 Sample App showing use of the RemarkableSDK
 
 ##RemarkableSDK Usage
-Initialisation
+###Initialisation
 Import the header from the framework:
 
 `import "RemarkableSDK.framework/include/RemarkableSDK.h"`
