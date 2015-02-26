@@ -2,10 +2,30 @@
 Sample App showing use of the RemarkableSDK
 
 ##RemarkableSDK Usage
-###Initialisation
+
+###Installation
+
+Import RemarkableSDK by dragging and dropping the framework into an Xcode 6 project.
+
 Import the header from the framework:
 
 `import "RemarkableSDK.framework/include/RemarkableSDK.h"`
+
+Swift users need to create a bridging header.
+
+Import your Objective C framework by dragging and dropping the framework into an Xcode 6 Swift project.
+
+Create a new Objective C file in your project (File->New->File [Objective C for iOS]).
+
+Accept the prompt (agree) to create a bridging header file between Objective C and Swift.
+
+Delete your newly created Objective C file but retain the bridging header file ${YOURPROJ}-Bridging-Header.h.
+
+In the Bridging header file, import the header.
+
+###Initialisation
+
+
 
 If you wish to use the draft mode of Remarkable, set the draftMode flag before you make the call to initialiseWithApiKey in your appDelegate implementation like so:
 
