@@ -29,7 +29,7 @@ Simply add those method calls to the respective methods in your appDelegate impl
 applicationDidEnterBackground and applicationWillEnterForeground.
 
  
-##Object Usage
+###Object Usage
 
 Remarkable Objects are delivered in an NSDictionary object for ease of integration.
 
