@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964D6CEF1A96BDE70062E352 /* RemarkableSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964D6CEE1A96BDE70062E352 /* RemarkableSDK.framework */; };
+		964D6CF11A96C32D0062E352 /* RemarkableSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 964D6CEE1A96BDE70062E352 /* RemarkableSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		96F3DB081A7BAB7B00BE2BE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DB071A7BAB7B00BE2BE7 /* main.m */; };
 		96F3DB0B1A7BAB7B00BE2BE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DB0A1A7BAB7B00BE2BE7 /* AppDelegate.m */; };
 		96F3DB0E1A7BAB7B00BE2BE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DB0D1A7BAB7B00BE2BE7 /* ViewController.m */; };
@@ -14,6 +16,8 @@
 		96F3DB131A7BAB7B00BE2BE7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F3DB121A7BAB7B00BE2BE7 /* Images.xcassets */; };
 		96F3DB161A7BAB7B00BE2BE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3DB141A7BAB7B00BE2BE7 /* LaunchScreen.xib */; };
 		96F3DB221A7BAB7B00BE2BE7 /* RemarkableTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3DB211A7BAB7B00BE2BE7 /* RemarkableTestTests.m */; };
+		96F3DB381A7BD7F200BE2BE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3DB371A7BD7F200BE2BE7 /* UIKit.framework */; };
+		96F3DB3A1A7BD7F700BE2BE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3DB391A7BD7F700BE2BE7 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +30,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		964D6CF01A96C3100062E352 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				964D6CF11A96C32D0062E352 /* RemarkableSDK.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CD40431A7C351C000B1E21 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		964D6CEE1A96BDE70062E352 /* RemarkableSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RemarkableSDK.framework; path = lib/RemarkableSDK.framework; sourceTree = "<group>"; };
 		96F3DB021A7BAB7B00BE2BE7 /* RemarkableTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemarkableTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3DB061A7BAB7B00BE2BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F3DB071A7BAB7B00BE2BE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +68,8 @@
 		96F3DB1B1A7BAB7B00BE2BE7 /* RemarkableTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemarkableTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3DB201A7BAB7B00BE2BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F3DB211A7BAB7B00BE2BE7 /* RemarkableTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemarkableTestTests.m; sourceTree = "<group>"; };
+		96F3DB371A7BD7F200BE2BE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96F3DB391A7BD7F700BE2BE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964D6CEF1A96BDE70062E352 /* RemarkableSDK.framework in Frameworks */,
+				96F3DB3A1A7BD7F700BE2BE7 /* Foundation.framework in Frameworks */,
+				96F3DB381A7BD7F200BE2BE7 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				96F3DB041A7BAB7B00BE2BE7 /* RemarkableTest */,
+				96F3DB2D1A7BABDC00BE2BE7 /* Frameworks */,
 				96F3DB1E1A7BAB7B00BE2BE7 /* RemarkableTestTests */,
 				96F3DB031A7BAB7B00BE2BE7 /* Products */,
 			);
@@ -119,6 +153,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		96F3DB2D1A7BABDC00BE2BE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				964D6CEE1A96BDE70062E352 /* RemarkableSDK.framework */,
+				96F3DB391A7BD7F700BE2BE7 /* Foundation.framework */,
+				96F3DB371A7BD7F200BE2BE7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +173,8 @@
 				96F3DAFE1A7BAB7B00BE2BE7 /* Sources */,
 				96F3DAFF1A7BAB7B00BE2BE7 /* Frameworks */,
 				96F3DB001A7BAB7B00BE2BE7 /* Resources */,
+				96CD40431A7C351C000B1E21 /* Embed Frameworks */,
+				964D6CF01A96C3100062E352 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -168,6 +214,7 @@
 				TargetAttributes = {
 					96F3DB011A7BAB7B00BE2BE7 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = PQ873CNW8A;
 					};
 					96F3DB1A1A7BAB7B00BE2BE7 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -345,9 +392,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Entropy Labs Limited (PQ873CNW8A)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RemarkableTest",
+					"$(PROJECT_DIR)",
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/lib/**",
+					"$(PROJECT_DIR)/lib",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/lib/RemarkableSDK.framework/include",
+				);
 				INFOPLIST_FILE = RemarkableTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a939600b-173a-4c4b-8672-8f2ae5fb40b2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib/**";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -355,9 +421,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Entropy Labs Limited (PQ873CNW8A)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RemarkableTest",
+					"$(PROJECT_DIR)",
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/lib/**",
+					"$(PROJECT_DIR)/lib",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/lib/RemarkableSDK.framework/include",
+				);
 				INFOPLIST_FILE = RemarkableTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a939600b-173a-4c4b-8672-8f2ae5fb40b2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lib/**";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -414,6 +498,7 @@
 				96F3DB271A7BAB7B00BE2BE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96F3DB281A7BAB7B00BE2BE7 /* Build configuration list for PBXNativeTarget "RemarkableTestTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +507,7 @@
 				96F3DB2A1A7BAB7B00BE2BE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
