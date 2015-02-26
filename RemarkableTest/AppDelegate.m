@@ -19,9 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+	// Override point for customization after application launch.
+	[RemarkableManager sharedInstance].draftMode = NO;
     [[RemarkableManager sharedInstance] initialiseWithApiKey: @"9dEFfk" withAppID:@"334c5d2f855eb9e5dd449f13"];
-    [RemarkableManager sharedInstance].draftMode = NO;
     
     return YES;
 }

@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+	[[RemarkableManager sharedInstance] refreshAllObjects];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +35,7 @@
 -(IBAction)reloadImage:(id)sender {
     
     NSDictionary * aboutObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"about"];
-    
+
     NSString * imageURL = (NSString*) [aboutObject objectForKey:@"image"];
     NSLog(@"image url : %@", imageURL);
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotImage:) name:@"gotImage" object:nil];
@@ -42,10 +43,10 @@
     
 }
 
--(void) gotImage:(NSNotification*)note {
+-(void) gotImage:(NSNotification*)notification {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"gotImage" object:nil];
-    if ([note.object isKindOfClass:[UIImage class]]) {
-        UIImage * image = note.object;
+    if ([notification.object isKindOfClass:[UIImage class]]) {
+        UIImage * image = notification.object;
         
         [imageView setImage:image];
         [imageView setContentMode:UIViewContentModeScaleAspectFit];
