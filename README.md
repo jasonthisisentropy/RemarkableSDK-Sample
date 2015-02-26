@@ -10,11 +10,13 @@ import "RemarkableSDK.framework/include/RemarkableSDK.h"
 If you wish to use the draft mode of Remarkable, set the draftMode flag before you make the call to initialiseWithApiKey in your appDelegate implementation like so:
 
 [RemarkableManager sharedInstance].draftMode = YES;
+
 Draft mode is false by default so you need only override if you are testing.
 
 Initialise the framework with your APIKey and AppID, e.g.:
 
 [[RemarkableManager sharedInstance] initialiseWithApiKey: @"<yourAPIKey>" withAppID:@"<yourAppID>"];
+
 Typically this is set in your application:application didFinishLaunchingWithOptions: method. 
 
 You can optionally handle app events when entering background or becoming active again through the methods:
