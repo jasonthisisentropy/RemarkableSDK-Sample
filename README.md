@@ -57,11 +57,15 @@ Remarkable Objects are delivered in an NSDictionary object for ease of integrati
 
 You will need to know the name of the object as defined in the Remarkable Dashboard and the object can be accessed like so:
 
-`NSDictionary * anObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"objectName"];`
+`NSDictionary * myObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"objectName"];`
+
+If your object is an array datatype, the name of the property will be the object's title:
+
+`NSArray * myArray = [myObject objectForKey:@"objectName"];`
 
 Object properties are accessed in the standard key/value pair methods of NSDictionary.
 
-`NSString * imageURL = (NSString*) [anObject objectForKey:@"image"];`
+`NSString * imageURL = (NSString*) [myObject objectForKey:@"image"];`
 
 Images can be prefetched and are cached until required. To fetch an image whether it has been cached or not just call the method requestImageForURLString, passing the URL of the image as retrieved from the NSDictionary and, optionally, the string of an NSNotification name. Images are returned in an NSNotification object’s notification.object if the NSNotification name was not nil.
 
