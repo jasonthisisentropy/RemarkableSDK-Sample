@@ -39,11 +39,13 @@ Initialise the framework with your APIKey and AppID, e.g.:
 
 Typically this is set in your application:application didFinishLaunchingWithOptions: method. 
 
-You can optionally handle app events when entering background or becoming active again through the methods:
+You can optionally handle app events when entering background or becoming active again through the methods, optionally you can request a notification when content has refreshed:
 
 `[[RemarkableManager sharedInstance] handleApplicationToBackground];`
 
 `[[RemarkableManager sharedInstance] handleApplicationToForeground];`
+
+`[[RemarkableManager sharedInstance] handleApplicationToForegroundWithNotification:@"contentRefreshed"];`
 
 Simply add those method calls to the respective methods in your appDelegate implementation:
 applicationDidEnterBackground and applicationWillEnterForeground.
