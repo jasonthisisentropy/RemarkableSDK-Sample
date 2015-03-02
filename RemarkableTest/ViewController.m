@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "RemarkableSDK.framework/include/RemarkableSDK.h"
 
+
 @interface ViewController ()
 
 @property (nonatomic, strong) IBOutlet UIImageView * imageView;
@@ -33,6 +34,9 @@
 }
 
 -(IBAction)reloadImage:(id)sender {
+    
+    NSDictionary * guidanceObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"guidance"];
+    NSLog(@"%@", guidanceObject);
     
     NSDictionary * aboutObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"about"];
 

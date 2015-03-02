@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Entropy Labs. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 
 @interface RemarkableManager : NSObject
 
-/*!
- * @brief Remarkable draft mode flag, set YES to retrieve draft data, set NO for live data.
- */
+/*! @var Remarkable draft mode flag, set YES to retrieve draft data, set NO for live data. */
+ 
 @property (nonatomic, assign) BOOL draftMode;
 
 
