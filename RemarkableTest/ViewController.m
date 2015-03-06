@@ -36,18 +36,22 @@
 -(IBAction)reloadImage:(id)sender {
     // From the sample schema, we will request two objects 'guidance' and 'about'
     
-    NSDictionary * guidanceObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"guidance"];
-    NSLog(@"%@", guidanceObject);
-    NSArray * myArray = [guidanceObject objectForKey:@"guidance"];
-    NSLog(@"%@", myArray);
+    if ([RemarkableManager sharedInstance].hasObjects) {
+        
+        NSDictionary * guidanceObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"guidance"];
+        NSLog(@"%@", guidanceObject);
+        NSArray * myArray = [guidanceObject objectForKey:@"guidance"];
+        NSLog(@"%@", myArray);
+        
+        
+        
+        NSDictionary * aboutObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"about"];
+        NSString * imageURL = (NSString*) [aboutObject objectForKey:@"image"];
+        NSLog(@"image url : %@", imageURL);
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotImage:) name:@"gotImage" object:nil];
+        [[RemarkableManager sharedInstance] requestImageForURLString:imageURL withNotificationName:@"gotImage"];
+    }
     
-    
-    
-    NSDictionary * aboutObject = [[RemarkableManager sharedInstance] getRemarkableObjectForTitle:@"about"];
-    NSString * imageURL = (NSString*) [aboutObject objectForKey:@"image"];
-    NSLog(@"image url : %@", imageURL);
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotImage:) name:@"gotImage" object:nil];
-    [[RemarkableManager sharedInstance] requestImageForURLString:imageURL withNotificationName:@"gotImage"];
     
 }
 

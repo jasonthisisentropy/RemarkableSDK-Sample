@@ -12,8 +12,10 @@
 @interface RemarkableManager : NSObject
 
 /*! @var Remarkable draft mode flag, set YES to retrieve draft data, set NO for live data. */
- 
 @property (nonatomic, assign) BOOL draftMode;
+
+/*! @var Remarkable hasObjects flag, readonly flag which checks if the database has data. */
+@property (nonatomic, readonly) BOOL hasObjects;
 
 
 /*!
